@@ -10,8 +10,9 @@ interface FSA<T, P = undefined, M = undefined> {
 
 export type ADD_TODO_ACTION = FSA<Todos.ADD_TODO, Todo>;
 export type REMOVE_TODO_ACTION = FSA<Todos.REMOVE_TODO, Todo>;
+export type FETCH_TODOS_SUCCESS = FSA<Todos.FETCH_TODOS_SUCCESS, Todo[]>;
 
-export type TODOS_ACTION = ADD_TODO_ACTION | REMOVE_TODO_ACTION;
+export type TODOS_ACTION = ADD_TODO_ACTION | REMOVE_TODO_ACTION | FETCH_TODOS_SUCCESS;
 
 export function addTodo(title: string): ADD_TODO_ACTION {
   return {
@@ -21,6 +22,13 @@ export function addTodo(title: string): ADD_TODO_ACTION {
       title,
       completed: false,
     },
+  };
+}
+
+export function fetchTodosSuccess(todos: Todo[]): FETCH_TODOS_SUCCESS {
+  return {
+    type: Todos.FETCH_TODOS_SUCCESS,
+    payload: todos,
   };
 }
 

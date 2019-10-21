@@ -1,4 +1,5 @@
 export enum Todos {
   ADD_TODO = 'ADD_TODO',
   REMOVE_TODO = 'REMOVE_TODO',
+  FETCH_TODOS_SUCCESS = 'FETCH_TODOS_SUCCESS',
 }

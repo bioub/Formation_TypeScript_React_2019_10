@@ -8,6 +8,7 @@
     "@types/react": "16.9.9",
     "@types/react-dom": "16.9.2",
     "@types/react-redux": "^7.1.5",
+    "cra-append-sw": "^2.6.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-redux": "^7.1.1",
@@ -19,7 +20,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && cra-append-sw ./src/custom-sw.js",
     "test": "react-scripts test",
     "lint": "tslint ./src/**/*.ts"
   },
