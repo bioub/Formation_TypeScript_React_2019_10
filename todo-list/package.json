@@ -13,13 +13,15 @@
     "react-redux": "^7.1.1",
     "react-scripts": "3.2.0",
     "redux": "^4.0.4",
+    "tslint": "^5.20.0",
+    "tslint-react": "^4.1.0",
     "typescript": "3.6.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "lint": "tslint ./src/**/*.ts"
   },
   "eslintConfig": {
     "extends": "react-app"
